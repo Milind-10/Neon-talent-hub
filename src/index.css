@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans antialiased text-slate-900 bg-white transition-colors duration-300;
+  }
+  .dark body {
+    @apply text-slate-100 bg-slate-950;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+  .neon-border {
+    box-shadow: 0 0 5px currentColor, inset 0 0 5px currentColor;
+  }
+  .neon-box {
+    box-shadow: 0 0 15px currentColor;
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink;
+  }
+}
